@@ -8,7 +8,7 @@ export default function handleProfileSignup(firstName, lastName, fileName) {
       results.forEach((e) => {
         ls.push({
           status: e.status,
-          value: e.status === 'fulfilled' ? e.value : e.reason,
+          value: e.status === 'fulfilled' ? e.value : `${e.reason}`,
         });
       });
       return ls;
