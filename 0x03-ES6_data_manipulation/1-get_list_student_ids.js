@@ -1,5 +1,7 @@
 const getListStudentIds = (arr) => {
   const b = [...arr];
-  return b.map((e) => e.id).filter((id) => id !== undefined);
+  const c = [];
+  b.map((e) => (e.id !== undefined ? c.push(e.id) : null));
+  return c;
 };
 export default getListStudentIds;
