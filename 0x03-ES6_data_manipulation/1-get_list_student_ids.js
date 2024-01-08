@@ -1,6 +1,4 @@
-const getListStudentIds = (arr) => {
-  const c = [];
-  Array.from(arr).map((e) => (e.id !== undefined ? c.push(e.id) : null));
-  return c;
+const getListStudentIds = (ls) => {
+return Array.isArray(ls) ? ls.map((e) => e.id) : [];
 };
 export default getListStudentIds;
