@@ -1,4 +1,2 @@
-const getListStudentIds = (ls) => {
-return Array.isArray(ls) ? ls.map((e) => e.id) : [];
-};
+const getListStudentIds = (ls) => (Array.isArray(ls) ? ls.map((e) => e.id) : []);
 export default getListStudentIds;
