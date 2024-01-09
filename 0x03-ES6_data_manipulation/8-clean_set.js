@@ -1,3 +1,6 @@
 export default function cleanSet(set, startString) {
-  return Array.from(set).filter((e) => e.slice(0, 3) === startString).map((e) => e.slice(3)).join('-');
+  if (set.size < 1) {
+    return ''
+  }
+  return Array.from(set).filter((e) => e.slice(0, 3) === startString && e.length > 3).map((e) => e.slice(3)).join('-');
 }
