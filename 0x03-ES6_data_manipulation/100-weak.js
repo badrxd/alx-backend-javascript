@@ -1,6 +1,9 @@
 const weakMap = new WeakMap();
 
 const queryAPI = (obj) => {
+  if (!obj || !(obj instanceof Object)) {
+    return;
+  }
   if (!weakMap.has(obj)) {
     weakMap.set(obj, 0);
   }
