@@ -1,6 +1,6 @@
 const { readFile } = require('fs').promises;
 
-const countStudents = async path => {
+const countStudents = async (path) => {
   try {
     const fields = new Map();
     let NumStd = 0;
