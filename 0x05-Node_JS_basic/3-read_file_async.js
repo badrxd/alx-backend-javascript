@@ -1,14 +1,14 @@
-const fs = require('fs/promises');
+const { readFile } = require('fs').promises;
 
-const countStudents = async (path) => {
+const countStudents = async path => {
   try {
     const fields = new Map();
     let NumStd = 0;
-    let contents = await fs.readFile(path, 'utf8');
+    let contents = await readFile(path, 'utf8');
     contents = contents.split('\n');
     for (let i = 0; i < contents.length; i += 1) {
       if (
-        contents[i].length > 0 
+        contents[i].length > 0
         && contents[i] !== 'firstname,lastname,age,field'
       ) {
         const data = contents[i].split(',');
