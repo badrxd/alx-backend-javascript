@@ -49,7 +49,7 @@ const app = http.createServer((req, res) => {
       })
       .catch((err) => {
         res.statusCode = 404;
-        res.end(err);
+        res.end(err.message);
       });
   }
 });
