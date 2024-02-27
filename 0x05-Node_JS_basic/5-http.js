@@ -21,7 +21,6 @@ const countStudents = async () => {
         NumStd += 1;
       }
     }
-    // console.log(`Number of students: ${NumStd}`);
     globalText.push(`Number of students: ${NumStd}`);
     for (const [index, field] of fields.entries()) {
       let text = field.join(', ');
@@ -46,10 +45,7 @@ const app = http.createServer((req, res) => {
     res.write('This is the list of our students\n');
     countStudents(res)
       .then((data) => {
-        data.forEach((e) => {
-          res.write(`${e}\n`);
-        });
-        res.end();
+        res.end(data.join('\n'));
       })
       .catch((err) => {
         res.statusCode = 404;
