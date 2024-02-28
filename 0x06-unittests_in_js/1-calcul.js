@@ -1,7 +1,6 @@
 const calculateNumber = (type, a, b) => {
   const aRound = Math.round(a);
   const bRound = Math.round(b);
-  console.log(type, aRound, bRound);
   if (type === 'SUM') {
     return aRound + bRound;
   }
