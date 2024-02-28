@@ -2,6 +2,7 @@ const calculateNumber = require('./2-calcul_chai');
 const expect = require('chai').expect;
 const { describe, it } = require('mocha');
 
+/* eslint-disable */
 describe('calculateNumber', function () {
   let number = undefined;
   describe('SUM', function () {
@@ -45,3 +46,4 @@ describe('calculateNumber', function () {
     });
   });
 });
+/* eslint-enable */
