@@ -1,7 +1,9 @@
-const calculateNumber = require('./1-calcul');
 const assert = require('assert');
+const calculateNumber = require('./1-calcul');
+
+/* eslint-disable */
 describe('calculateNumber', function () {
-  it('Tests around the “rounded” part and the type of calculation', function () {
+  it('tests around the “rounded” part and the type of calculation', function () {
     let number = calculateNumber('SUM', 1, 3);
     assert.equal(number, 4);
 
@@ -20,3 +22,4 @@ describe('calculateNumber', function () {
     assert.equal(number, 'Error');
   });
 });
+/* eslint-enable */
