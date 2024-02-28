@@ -13,6 +13,7 @@ const calculateNumber = (type, a, b) => {
     }
     return aRound / bRound;
   }
+  return 0;
 };
 
 module.exports = calculateNumber;
