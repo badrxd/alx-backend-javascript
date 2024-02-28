@@ -22,7 +22,7 @@ class StudentsController {
     if (userMajor !== 'CS' && userMajor !== 'SWE') {
       return response.status(500).send('Major parameter must be CS or SWE');
     }
-    readDatabase(process.argv[2].toString())
+    return readDatabase(process.argv[2].toString())
       .then((data) => {
         const names = data.get(userMajor);
         response.status(200).send(`List: ${names.join(', ')}`);
