@@ -14,6 +14,7 @@ class Utils {
       }
       return aRound / bRound;
     }
+    return 0;
   }
 }
 
