@@ -10,7 +10,7 @@ const calculateNumber = (type, a, b) => {
   }
   if (type === 'DIVIDE') {
     if (b === 0) {
-      c = 'Error';
+      return 'Error';
     }
     c = aRound / bRound;
   }
