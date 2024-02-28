@@ -9,8 +9,8 @@ describe('calculateNumber', function () {
 
     number = calculateNumber('SUBTRACT', 1.5, -3.7);
     assert.equal(number, 6);
-    number = calculateNumber('SUBTRACT', -1.5, -3.7);
-    assert.equal(number, 3);
+    number = calculateNumber('SUBTRACT', -5.5, -3.7);
+    assert.equal(number, -1);
 
     number = calculateNumber('DIVIDE', 1.4, 4.5);
     assert.equal(number, 0.2);
