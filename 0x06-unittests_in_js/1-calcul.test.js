@@ -16,6 +16,8 @@ describe('calculateNumber', function () {
     assert.equal(number, 0.2);
     number = calculateNumber('DIVIDE', -9.6, 10);
     assert.equal(number, -1);
+    number = calculateNumber('DIVIDE', 9.6, -10);
+    assert.equal(number, -1);
     number = calculateNumber('DIVIDE', 1.5, 0);
     assert.equal(number, 'Error');
   });
