@@ -1,5 +1,5 @@
 class Utils {
-  static calculateNumber = (typ, a, b) => {
+  static calculateNumber(type, a, b) {
     const aRound = Math.round(a);
     const bRound = Math.round(b);
     if (type === 'SUM') {
@@ -14,7 +14,7 @@ class Utils {
       }
       return aRound / bRound;
     }
-  };
+  }
 }
 
 module.exports = Utils;
