@@ -2,17 +2,20 @@ const calculateNumber = (type, a, b) => {
   const aRound = Math.round(a);
   const bRound = Math.round(b);
   let c = 0;
-  if (type === 'SUM') {
-    c = aRound + bRound;
-  }
-  if (type === 'SUBTRACT') {
-    c = aRound - bRound;
-  }
-  if (type === 'DIVIDE') {
-    if (b === 0) {
-      return 'Error';
-    }
-    c = aRound / bRound;
+  switch (type) {
+    case 'SUM':
+      c = aRound + bRound;
+      break;
+    case 'SUBTRACT':
+      c = aRound - bRound;
+      break;
+    case 'DIVIDE':
+      if (bRound === 0) {
+        c = 'Error';
+      } else {
+        c = aRound / bRound;
+      }
+      break;
   }
   return c;
 };
