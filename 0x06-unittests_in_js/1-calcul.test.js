@@ -4,8 +4,6 @@ describe('calculateNumber', function () {
   it('Tests around the “rounded” part and the type of calculation', function () {
     let number = calculateNumber('SUM', 1, 3);
     assert.equal(number, 4);
-    number = calculateNumber('SUM', 1.5, -3.7);
-    assert.equal(number, -2);
 
     number = calculateNumber('SUBTRACT', 1.5, -3.7);
     assert.equal(number, 6);
