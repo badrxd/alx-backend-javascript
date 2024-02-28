@@ -10,5 +10,7 @@ describe('calculateNumber', function () {
     assert.equal(number, 5);
     number = calculateNumber(1.5, 3.7);
     assert.equal(number, 6);
+    number = calculateNumber(1.5, -3.7);
+    assert.equal(number, -2);
   });
 });
