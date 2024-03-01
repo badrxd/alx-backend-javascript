@@ -1,6 +1,8 @@
 const { describe, it } = require('mocha');
-const expect = require('chai').expect;
+const { expect } = require('chai');
 const request = require('request');
+
+/* eslint-disable */
 describe('getPaymentTokenFromAPI', function () {
   it('status code should be 200', function (done) {
     request('http://localhost:7865', function (error, response, body) {
@@ -36,3 +38,4 @@ describe('getPaymentTokenFromAPI_2', function () {
     });
   });
 });
+/* eslint-enable */
