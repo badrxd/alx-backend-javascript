@@ -18,14 +18,13 @@ describe('getPaymentTokenFromAPI', function () {
 
 describe('getPaymentTokenFromAPI_2', function () {
   it('should return status code 200 when :id is a number', function (done) {
-    request('http://localhost:7865/12', function (error, response, body) {
+    request('http://localhost:7865/cart/12', function (error, response, body) {
       expect(response.statusCode).to.equal(200);
-      expect(body).to.equal('Payment methods for cart :12');
       done();
     });
   });
   it('should return correct result', function (done) {
-    request('http://localhost:7865/12', function (error, response, body) {
+    request('http://localhost:7865/cart/12', function (error, response, body) {
       expect(body).to.equal('Payment methods for cart :12');
       done();
     });
