@@ -1,4 +1,3 @@
-//create an express js app
 const express = require('express');
 
 const app = express();
@@ -8,14 +7,14 @@ app.get('/', (req, res) => {
   res.status(200).send('Welcome to the payment system');
 });
 app.get('/cart/:id', (req, res) => {
-  const id = req.params.id;
+  const { id } = req.params;
   try {
     if (!Number(id)) {
       return res.status(404).send('');
     }
-    res.status(200).send(`Payment methods for cart :${Number(id)}`);
+    return res.status(200).send(`Payment methods for cart :${Number(id)}`);
   } catch (err) {
-    res.status(404);
+    return res.status(404);
   }
 });
 
